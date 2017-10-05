@@ -1,0 +1,34 @@
+{
+  "name": "devtools-mc-assets",
+  "description": "Package to house MC static assets",
+  "version": "0.0.1",
+  "main": "index.js",
+  "bin": {
+    "devtools-mc-assets": "sync.js"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "curlrequest": "^1.0.1",
+    "unzipper": "^0.8.9",
+    "chalk": "^2.1.0",
+    "lodash": "^4.17.4",
+    "minimist": "^1.2.0",
+    "node-emoji": "^1.8.1",
+    "path": "^0.12.7",
+    "shelljs": "^0.7.8"
+  },
+  "scripts": {
+    "sync": "node bin/sync.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonLaster/devtools-mc-themes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "files": ["assets"],
+  "bugs": {
+    "url": "https://github.com/jasonLaster/devtools-mc-themes/issues"
+  },
+  "homepage": "https://github.com/jasonLaster/devtools-mc-themes#readme"
+}
