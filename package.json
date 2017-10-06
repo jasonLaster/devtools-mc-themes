@@ -1,13 +1,12 @@
 {
   "name": "devtools-mc-assets",
   "description": "Package to house MC static assets",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "bin": {
     "devtools-mc-assets": "sync.js"
   },
-  "devDependencies": {},
-  "dependencies": {
+  "devDependencies": {
     "curlrequest": "^1.0.1",
     "unzipper": "^0.8.9",
     "chalk": "^2.1.0",
@@ -17,6 +16,7 @@
     "path": "^0.12.7",
     "shelljs": "^0.7.8"
   },
+  "dependencies": {},
   "scripts": {
     "sync": "node bin/sync.js"
   },
