@@ -7,10 +7,9 @@ const minimist = require("minimist");
 const emoji = require("node-emoji");
 const curl = require("curlrequest");
 const unzipper = require("unzipper");
-var prependFile = require("prepend-file");
 
 const inbound =
-  "https://hg.mozilla.org/integration/mozilla-inbound/archive/tip.zip/devtools/client";
+  "https://hg.mozilla.org/integration/mozilla-inbound/archive/tip.zip/devtools";
 
 /*
 1. downloading the sources
@@ -34,7 +33,10 @@ async function fetch(url) {
 }
 
 async function fetchFile(url, zipPath, dirPath) {
-  const file = await fetch(`${inbound}/${url}`);
+  shell.exec(`rm -rf ${mcPath}`, { silent: true });
+  shell.exec(`mkdir -p ${mcPath}`, { silent: true });
+
+  const file = await fetch(`${inbound}`);
   shell.exec(`mkdir -p zips`, { silent: true });
   fs.writeFileSync(zipPath, file);
   fs.createReadStream(zipPath).pipe(unzipper.Extract({ path: dirPath }));
@@ -81,8 +83,7 @@ async function main() {
   console.log(chalk.blue("Syncing with MC\n"));
   console.log(`${emoji.get(":watch:")} ${chalk.yellow("Downloading files")}`);
 
-  await fetchFile(themesPath, "zips/themes.zip", "mc");
-  await fetchFile(widgetsPath, "zips/widgets.zip", "mc");
+  await fetchFile("", "zips/client.zip", "mc");
 
   console.log(
     `${emoji.get(":honeybee:")} ${chalk.yellow("Copying files to assets")}`
