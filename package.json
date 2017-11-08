@@ -4,7 +4,7 @@
   "version": "0.0.3",
   "main": "index.js",
   "bin": {
-    "devtools-mc-assets": "sync.js"
+    "devtools-mc-assets": "bin/sync.js"
   },
   "devDependencies": {
     "curlrequest": "^1.0.1",
