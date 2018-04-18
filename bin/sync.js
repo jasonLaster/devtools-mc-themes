@@ -71,11 +71,6 @@ const filesToUpdate = [
     filename: "devtools/client/themes/dark-theme.css",
     regex: /@import/,
     text: "@namespace theme-dark;\n\n@import"
-  },
-  {
-    filename: "devtools/client/themes/firebug-theme.css",
-    regex: /@import/,
-    text: "@namespace theme-firebug;\n\n@import"
   }
 ];
 
