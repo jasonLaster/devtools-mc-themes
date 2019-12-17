@@ -293,8 +293,8 @@ supports-color@^4.0.0:
   resolved "https://registry.yarnpkg.com/traverse/-/traverse-0.3.9.tgz#717b8f220cc0bb7b44e40514c22b2e8bbc70d8b9"
 
 unzipper@^0.8.9:
-  version "0.8.9"
-  resolved "https://registry.yarnpkg.com/unzipper/-/unzipper-0.8.9.tgz#daae2c9b9a63290430c063ea9ff691038c5ce78c"
+  version "0.8.13"
+  resolved "https://registry.yarnpkg.com/unzipper/-/unzipper-0.8.13.tgz#ea889ca10cdda4dcf604e632f19fc5f81871beae"
   dependencies:
     big-integer "^1.6.17"
     binary "~0.3.0"
