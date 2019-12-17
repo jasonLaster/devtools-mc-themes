@@ -1,7 +1,7 @@
 {
   "name": "devtools-mc-assets",
   "description": "Package to house MC static assets",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "main": "index.js",
   "bin": {
     "devtools-mc-assets": "bin/sync.js"

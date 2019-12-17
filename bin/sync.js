@@ -43,9 +43,10 @@ async function fetchFile(url, zipPath, dirPath) {
 }
 
 function copyFiles() {
+  const themesPath = "devtools/client/themes"
   shell.exec(`rm -rf ${assetsPath}`, { silent: true });
-  shell.exec(`mkdir -p ${assetsPath}`, { silent: true });
-  const out = shell.exec(`cp -r ${mcPath}/mozilla*/* ${assetsPath}`, {
+  shell.exec(`mkdir -p ${assetsPath}/${themesPath}`, { silent: true });
+  const out = shell.exec(`cp -r ${mcPath}/mozilla*/${themesPath}/* ${assetsPath}/${themesPath}`, {
     silent: true
   });
 }
